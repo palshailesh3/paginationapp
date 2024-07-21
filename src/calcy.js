@@ -30,7 +30,7 @@ const Calcy = ()=>{
        <div className="display" id="display"></div>
        <div className="opertor">
          {
-            operator.map((elm)=> <div onClick={handlecal}>{elm}</div>)
+            operator.map((elm,index)=> <div onClick={handlecal} key={index}>{elm}</div>)
          }
        </div>
     </div>
