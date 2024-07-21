@@ -21,9 +21,7 @@ const Calcy = ()=>{
                 document.getElementById('display').innerText=prev+innerText;
                 return prev+innerText
             });
-        }
-           
-            
+        }     
      }
     return(
     <div className="calcy">
