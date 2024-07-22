@@ -4,7 +4,7 @@ import { useCallback, useRef, useState } from "react"
 
   const Timer = ()=>{
      const [time,settime] = useState(0);
-     const utimer = useRef(null);
+    // const utimer = useRef(null);
      
 
       function addtimer(){
@@ -13,34 +13,34 @@ import { useCallback, useRef, useState } from "react"
 
         return(({target:{innerHTML}})=>{ 
             if(innerHTML=="start"){ 
-                 if(!timer){   timer=true;       
+                 if(!timer){          
                     console.log("start");       
-                    utimer.current= setInterval(()=>{
+                     timer= setInterval(()=>{
                         settime(prev=>prev+1);
                         count+=1;
                         console.log(count)
+                        if(count==10){clearInterval(timer);count=0;}
                     },1000)
-                 }else{ console.log("start again")
-                    clearInterval(utimer.current);
-                    utimer.current=setInterval(() => {
+                 }else{ console.log("start again");count=0;
+                    clearInterval(timer);
+                    timer=setInterval(() => {
                         settime(prev=>prev+1);
                         count+=1;
                         console.log(count)
+                        if(count==10){clearInterval(timer);count=0;}
                     }, 1000);
                  }
             }
-            else{ console.log(timer);
-                console.log("stop")
-                console.log(utimer.current);
-                clearInterval(utimer.current);
-                
+            else{   
+                clearInterval(timer); 
             }
            
         });
       }
 
       const startimer = useCallback(addtimer(),[])
-      const stoptimer = useCallback(addtimer(),[]);
+      //const stoptimer = useCallback(addtimer(),[]);    ******//what if we do like this************
+      const stoptimer = startimer;
     //  function startimer(){
     //     timer.current=setInterval(() => {
     //           settime(prev=>prev+1);
