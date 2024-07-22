@@ -8,7 +8,44 @@ const Calcy = ()=>{ let optr ='+-*/.';
    const count = useRef(0);
 
      function handlecal({target:{innerText}}){
-            
+
+        // switch(innerText){
+        //     case '=': {document.getElementById('display').innerText=eval(state);
+        //               setstate(`${eval(state)}`);}
+        //               break;
+
+        //     case 'c': {setstate(prev=>{
+        //                     document.getElementById('display').innerText=prev.slice(0,prev.length-1);
+        //                     return prev.slice(0,prev.length-1);
+        //                 });  }
+        //                 break;
+                        
+        //     case 'AC':{ setstate(prev=>{
+        //                       document.getElementById('display').innerText='';
+        //                       return '';
+        //                  });  }
+        //                  break;
+
+        //     case  optr.includes(innerText): { if(count.current==0){     
+        //                                       setstate(prev=>{
+        //                                        document.getElementById('display').innerText=prev+innerText;
+        //                                         count.current+=1;
+        //                                          return prev+innerText
+        //                                     });
+        //                                      }else{
+        //                                          setstate(prev=>prev)
+        //                                                               }  }
+        //                                      break;  
+                                             
+        //     case  num.includes(innerText):  {count.current=0;
+        //                                    setstate(prev=>{
+        //                                        document.getElementById('display').innerText=prev+innerText;
+        //                                        return prev+innerText
+        //                                    });  }
+        //                                    break;                            
+        // }
+          
+        
         if(innerText=='='){
             document.getElementById('display').innerText=eval(state);
             setstate(`${eval(state)}`);

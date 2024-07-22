@@ -2,11 +2,14 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Calcy from './calcy';
+import Switch from './switch';
+import Timer from './timer';
 
 function App() {
 
    const [user,setuser] = useState("");
    const [gusers,setguser] = useState("");
+   const [sdata ,setsdata] = useState(undefined);
 
   //  useEffect(()=>{
   //      async function gituser(){
@@ -25,7 +28,9 @@ function App() {
 //        setuser(value);
 //        console.log(value);
 //      }
-
+ const handelnum = ({target:{value}})=>{
+       setsdata(value);
+ }
 
   return (
     <div className="App">
@@ -38,6 +43,9 @@ function App() {
       {/* <input  type='text' value={user} onInput={handleinp}/> */}
 
       <Calcy />
+      <input type='number' onInput={handelnum}/>
+      <Switch data={sdata}/>
+      <Timer />
     </div>
   );
 
