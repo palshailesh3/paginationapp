@@ -40,6 +40,9 @@ import { useCallback, useRef, useState } from "react"
 
       const startimer = useCallback(addtimer(),[])
       //const stoptimer = useCallback(addtimer(),[]);    ******//what if we do like this************
+      //what if we do like this
+      //const startimer = addtimer();
+      //const stoptimer = addtimer();
       const stoptimer = startimer;
     //  function startimer(){
     //     timer.current=setInterval(() => {
