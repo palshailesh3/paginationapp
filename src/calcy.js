@@ -77,9 +77,7 @@ const Calcy = ()=>{ let optr ='+-*/.';
                 document.getElementById('display').innerText=prev+innerText;
                 return prev+innerText
             });
-        }
-           
-            
+        }     
      }
     return(
     <div className="calcy">

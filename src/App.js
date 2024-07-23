@@ -34,13 +34,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{user}</h1>
-      <p>{gusers.length}</p>
-      {/* {
-        gusers.map(elm=> <img src={elm.avatar_url} width="250px"/>)
-      } */}
-     
-      {/* <input  type='text' value={user} onInput={handleinp}/> */}
 
       <Calcy />
       <input type='number' onInput={handelnum}/>
